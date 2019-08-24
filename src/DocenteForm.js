@@ -113,11 +113,7 @@ return (
         </div>
       <div className="form-group">
         <label>Curso</label>
-       <select  ref={(input) => this.getCurso = input}>
-         <React.Fragment>
-          {this.props.cursos.map((curso)=>{return ( <option value={curso.id}>{curso.anio}-{curso.turno}</option>)})}
-          </React.Fragment>
-       </select>
+      
        {this.props.cursos.map((curso)=>{return ( <div className="form-check" id={curso.id} onClick={this.handleClick}> <input type="checkbox" className="form-check" checked={this.state.cursosDocente.indexOf(curso.id)!=-1} value={curso.id} id={curso.id}></input> <label id={curso.id} className="form-check" htmlFor={curso.id}>{curso.anio}-{curso.turno}</label></div>)})}
       </div>
     </div>

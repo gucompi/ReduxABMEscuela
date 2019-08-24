@@ -1,4 +1,4 @@
-const docenteReducer = (state = [], action) => {
+const docenteReducer = (state = [{curso: ["2019-08-24T13:51:41.312Z"],direccion: "123",editing: false,email: "pablogirola@email.com",id: "2019-08-24T13:53:21.959Z",legajo: "123",materia: "Algoritmos",nombre: "Pablo",telefono: "123"}], action) => {
     switch (action.type) {
     case 'ADD_DOCENTE':
     return state.concat([action.data])

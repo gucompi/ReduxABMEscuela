@@ -1,4 +1,4 @@
-const cursoReducer = (state = [], action) => {
+const cursoReducer = (state = [{anio: "1",editing: false,id: "2019-08-24T13:51:41.312Z",turno: "A"}], action) => {
     switch (action.type) {
     case 'ADD_CURSO':
     return state.concat([action.data])

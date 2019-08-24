@@ -20,11 +20,11 @@ return (
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <Link  to="/" className="nav-link">Lista de cursos</Link>
+            </li>
           <li className="nav-item">
               <Link to="/alumnos" className="nav-link">Lista de alumnos</Link>
-            </li>
-            <li className="nav-item">
-              <Link  to="/cursos" className="nav-link">Lista de cursos</Link>
             </li>
             <li className="nav-item ">
               <Link to="/docentes" className="nav-link">Lista de Docentes</Link>

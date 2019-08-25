@@ -32,12 +32,7 @@ return (
 
   
         <tr>
-          <td>
-            <span className="custom-checkbox">
-              <input type="checkbox" id="checkbox1" name="options[]" defaultValue={1} />
-              <label htmlFor="checkbox1" />
-            </span>
-          </td>
+          
           <td>{alumno.nombre}</td>
           <td>{alumno.email}</td>
           <td>{alumno.direccion}</td>

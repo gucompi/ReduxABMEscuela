@@ -71,9 +71,10 @@ class DocenteForm extends Component {
           this.getDireccion.value=docente.direccion
           this.getTelefono.value=docente.telefono
           this.getLegajo.value=docente.legajo
-          this.getCurso.value=docente.curso
+         
           this.getMateria.value=docente.materia
           this.getEditing=true;
+          
          }
       })
     }

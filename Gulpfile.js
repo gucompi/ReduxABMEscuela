@@ -8,7 +8,7 @@ var paths = {
     js : { src : [ 'src/**/*.js', 'app/**/*.jsx' ], dest : 'public/js/' }
 };
 
-gulp.task('default', ['build']);
+gulp.task('default', ['build']); 
 
 //
 // Watch
@@ -23,18 +23,18 @@ gulp.task('watch', function () {
 gulp.task('build', [ 'compile' ]);
 
 gulp.task('compile', function () {
-  browserify({
-    entries: [ './src/index.js' ],
-    extensions: [ '.js', '.jsx' ],
-    debug: true // Add sourcemaps
-  })
-  .transform(babelify) // JSX and ES6 => JS
-  .bundle() // Browserify bundles required files
-    .on('error', console.error.bind(console))
-    .on("error", notify.onError({
-      message: 'Error: <%= error.message %>',
-      sound: 'Sosumi'
-    }))
-  .pipe(source('app.js')) // Desired filename of bundled files
-  .pipe(gulp.dest(paths.js.dest));
+    browserify({
+        entries: [ './src/index.js' ],
+        extensions: [ '.js', '.jsx' ],
+        debug: true // Add sourcemaps
+    })
+        .transform(babelify) // JSX and ES6 => JS
+        .bundle() // Browserify bundles required files
+        .on('error', console.error.bind(console))
+        .on("error", notify.onError({
+            message: 'Error: <%= error.message %>',
+            sound: 'Sosumi'
+        }))
+        .pipe(source('app.js')) // Desired filename of bundled files
+        .pipe(gulp.dest(paths.js.dest));
 });
